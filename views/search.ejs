@@ -1,0 +1,36 @@
+<style type=""text/css">
+    label {
+      color: purple;
+      font-weight: bold;
+      text-align: right;
+	  display: block;
+    }
+    
+    form { 
+     width: 300px;
+     margin: 10px auto;
+    }
+</style>
+
+<h1 style="color: blue; text-decoration: underline"> Search page for the movies</h1>
+
+<div style="width: 350px; border: 2px solid brown">
+    <form method="GET" action="/results">
+       <br/>
+       <label>
+           By Movie Name: 
+        <input type="text" placeholder="Movie" name="movie" required>
+       </label>
+     
+       <br/>
+       <label>
+           By Movie Year: 
+          <input type="number" placeholder="Year" name="year">
+       </label> 
+       <br/>
+       <label>
+        <input type="submit" value="Submit">
+       </label> 
+       <br/>
+    </form>
+ </div>

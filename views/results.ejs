@@ -1,0 +1,24 @@
+<h1 style="color: green"> 
+  Results for the Movie: <span style="color: #660562"> <%= movie %> </span>
+ <%  if(year) { %>
+   and Year: <span style="color: #660562"> <%= year %> </span>
+ <% } %>
+</h1>
+
+<% if(result["Search"]) { %>
+ <ul style="color: #053366; border: 2px solid brown; width: 700px">
+  <% result["Search"].forEach(function(movie) { %>
+   <li>
+       <strong>
+        <%= movie["Title"]%>
+       </strong>
+       -
+       <%= movie["Year"]%>
+   </li>
+  <% }) %>
+ </ul>
+<% } else { %>
+ <h2 style="color: red"> No results found...</h3>
+<% } %>
+
+<a href="/">Go to Search page</a>
